@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ProfilePhoto from './components/Profiles/ProfilePhoto';
+import Address from './components/Profiles/Address';
+import FullName from './components/Profiles/FullName';
+import { Card } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card body border="dark" style={{ width: '20rem' , backgroundColor: "white", borderRadius:"1rem" , boxShadow: "0 10px 8px 0 rgba(0,0,0,0.2)"} }>
+    <div className= 'uppercon'>
+     <ProfilePhoto/>
+     </div>
+     <div className = 'lowercon'>
+     <FullName/>
+     <Address/>
+    </div>
+     </Card>
     </div>
   );
 }
